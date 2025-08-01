@@ -12,7 +12,9 @@ export default function WeatherApp(){
         temp:24.63,
         tempMax:24.63,
         tempMin: 24.63,
-        weather: "overcast clouds"
+        weather: "overcast clouds",
+        wind: 4.09,
+        rain: 1.01
 
     })
 
@@ -23,7 +25,7 @@ export default function WeatherApp(){
     return(
         <>
             
-            <Header updateInfo={updateInfo}/>
+            <Header updateInfo={updateInfo} info={weatherInfo}/>
             <Dashboard info={weatherInfo}/>
         </>
     )

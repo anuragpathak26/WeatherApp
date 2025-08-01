@@ -18,10 +18,10 @@ export default function Dashboard({info}){
                         <div>
                             <div>
                                 <span>{info.city}</span>
-                                <span>Partly Cloudy</span>
+                                <span>{info.weather}</span>
                             </div>
                             <div>
-                                <span>28<sup>o</sup></span>
+                                <span>{info.temp}<sup>o</sup></span>
                             </div>
                         </div>
                     </div>
@@ -61,49 +61,7 @@ export default function Dashboard({info}){
                             </div>
                             <div>
                                 <span>
-                                    26 <sup>o</sup>
-                                </span>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <img src={SunCloudy} alt="" />
-                                <div>
-                                    <span>Cloudy</span>
-                                    <span>Heavy</span>
-                                </div>
-                            </div>
-                            <div>
-                                <span>
-                                    23 <sup>o</sup>
-                                </span>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <img src={Rain} alt="" />
-                                <div>
-                                    <span>Rain</span>
-                                    <span>Normal</span>
-                                </div>
-                            </div>
-                            <div>
-                                <span>
-                                    22 <sup>o</sup>
-                                </span>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <img src={Drops} alt="" />
-                                <div>
-                                    <span>Humidity</span>
-                                    <span>Heavy</span>
-                                </div>
-                            </div>
-                            <div>
-                                <span>
-                                    26 <span style={{fontSize:"15px", font:"none"}}>g/m <sup>3</sup></span>
+                                    {info.feelsLike} <sup>o</sup>
                                 </span>
                             </div>
                         </div>
@@ -117,7 +75,49 @@ export default function Dashboard({info}){
                             </div>
                             <div>
                                 <span>
-                                    
+                                   {info.wind}
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src={Rain} alt="" />
+                                <div>
+                                    <span>Rain</span>
+                                    <span>Normal</span>
+                                </div>
+                            </div>
+                            <div>
+                                <span>
+                                    {info.rain} <span>mm</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src={Drops} alt="" />
+                                <div>
+                                    <span>Humidity</span>
+                                    <span>Heavy</span>
+                                </div>
+                            </div>
+                            <div>
+                                <span>
+                                    {info.humidity} <span style={{fontSize:"15px", font:"none"}}>g/m <sup>3</sup></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src={Temp} alt="" />
+                                <div>
+                                    <span>Min-Temp</span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div>
+                                <span>
+                                    {info.tempMin} <sup>o</sup>
                                 </span>
                             </div>
                         </div>
@@ -126,11 +126,12 @@ export default function Dashboard({info}){
                                 <img src={Temp} alt="" />
                                 <div>
                                     <span>Max-Temp</span>
+                                    <span></span>
                                 </div>
                             </div>
                             <div>
                                 <span>
-                                    27 <sup>o</sup>
+                                    {info.tempMax} <sup>o</sup>
                                 </span>
                             </div>
                         </div>

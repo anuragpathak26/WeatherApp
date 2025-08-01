@@ -5,7 +5,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 
 
-export default function Header({updateInfo}){
+export default function Header({updateInfo, info}){
     let [city,setCity] = useState("")
     
 
@@ -27,7 +27,8 @@ export default function Header({updateInfo}){
         humidity: jsonResponse.main.humidity,
         feelsLike: jsonResponse.main.feels_like,
         weather: jsonResponse.weather[0].description,
-
+        wind: jsonResponse.wind.speed,
+        rain: jsonResponse.rain?.["1h"] ?? 0
        }
        console.log(result)
        return result       
@@ -50,7 +51,7 @@ export default function Header({updateInfo}){
         <section className="header">
             <div className="location">
                 <LocationOnOutlinedIcon/>
-                <span style={{fontSize:"1.1rem"}} value={city}>Pune,In</span>
+                <span style={{fontSize:"1.1rem"}} value={city}>{info.city}</span>
             </div>
             <div style={{position:"relative"}}>
                 <SearchOutlinedIcon
@@ -68,16 +69,7 @@ export default function Header({updateInfo}){
 
                 <input type="text" placeholder="search here"  onChange={handleChange}/>
             </div>
-            <div>
-                <CalendarMonthOutlinedIcon
-                style={{
-                    cursor:"pointer",
-                    transition:"0.5s",
-                    '&:hover':{
-                        color:"#409ac7"
-                    }
-                }} />
-            </div>
+           
 
         </section>
     )
