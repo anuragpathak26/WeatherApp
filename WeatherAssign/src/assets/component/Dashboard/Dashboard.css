@@ -1,0 +1,181 @@
+.dashBoard{
+    max-width: 75vw;
+    position: relative ;
+    left: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.dashBoard .home{
+    width: 70%;
+}
+.img-1{
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 40px rgba(0,0,0,0.1);
+    border-radius: 0.8rem;
+    padding: 20px 15px 20px 15px;
+}
+.image{
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:space-between ;
+    gap: 0.8rem;
+    color: white;
+}
+.image img{
+    width: 120px;
+}
+.image>div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    justify-content: space-between;
+    
+}
+.image > div span{
+    display: block;
+}
+.image> div > div:first-child span:nth-child(1){
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.image> div > div:first-child span:nth-child(2){
+    font-size: 1rem;
+}
+.image> div > div:last-child span{
+    font-size: 2.8rem;
+    display: flex;
+}
+
+.image> div > div:last-child span sup{
+    position: relative;
+    font-size: 1.5rem;
+}
+.main{
+    width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.3rem;
+}
+
+.main>div{
+    width: 200px;
+    height: 100%;
+    padding: 20px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 0.7rem;
+}
+.main > div div:first-child{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.main > div div:first-child span{
+    font-size: 2.6rem;
+    font-weight: 500;
+    display: flex;
+}
+
+.main > div div:first-child span sup{
+    font-size: 1.5rem;
+}
+
+.main > div div:last-child span{
+    display: block;
+}
+
+.main > div div:last-child span:first-child{
+    font-weight: 700;
+
+}
+.main > div div:last-child span:last-child{
+    color: rgba(0,0,0,0.5);
+}
+
+.highlights{
+    color: white;
+    margin-top: 20px;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 40px 30px rgba(0,0,0,0.1) ;
+    border-radius: 0.8rem;
+    padding: 20px 15px 20px 15px ;
+}
+.highlights h2{
+   font-weight: 600;
+
+}
+.all-highlights{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     gap: 1.5rem;
+     margin-top: 20px;
+     color: #000;
+}
+
+.all-highlights > div{
+    min-width: 240px;
+    background-color: white;
+    border-radius: 0.8rem;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.all-highlights > div > div:first-child{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.all-highlights > div > div:first-child img{
+    width: 50px;
+}
+
+.all-highlights > div > div:first-child span{
+    display: block;  
+}
+
+.all-highlights > div > div:first-child span:first-child{
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: normal;
+}
+
+.all-highlights > div > div:first-child span:last-child{
+    font-size: 0.9rem;
+    line-height: normal;
+    color: rgba(0,0,0,0.5);
+}
+
+.all-highlights > div > div:last-child span{
+    display: flex;
+    gap: 0.1rem;
+    font-size: 1.7rem;
+
+}
+
+.all-highlights > div > div:last-child span sup{
+    font-size: 1.1rem;
+}
+
